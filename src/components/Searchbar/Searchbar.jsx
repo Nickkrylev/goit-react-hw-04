@@ -7,7 +7,8 @@ import {
   SearchFormLabel,
   SearchFormInput,
 } from './Searchbar.styled';
-import { ReactComponent as SearchIcon } from '../../icons/search.svg';
+import searchIcon from '/src/icons/search.svg';
+
 import PropTypes from 'prop-types';
 
 const schema = yup.object().shape({
@@ -27,7 +28,8 @@ export const Searchbar = ({ onSubmit }) => {
       >
         <SearchForm>
           <SearchFormButton type="submit">
-            <SearchIcon />
+          <img src={searchIcon} alt="Search" />
+
             <SearchFormLabel>Search</SearchFormLabel>
           </SearchFormButton>
 
